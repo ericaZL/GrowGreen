@@ -1,4 +1,4 @@
-package com.example.model;
+package ellehacks2018.green.model;
 import java.io.*;
 
 public class FileManager {
