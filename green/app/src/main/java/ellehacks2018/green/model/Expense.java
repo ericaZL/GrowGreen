@@ -17,7 +17,7 @@ public class Expense implements Serializable{
 
     private FileManager fileManager = new FileManager();
 
-    private int amount;
+    private double amount;
 
     private String name;
 
@@ -25,14 +25,13 @@ public class Expense implements Serializable{
 
     private String catagory;
 
-    public Expense(int amount, String name, Date date, String catagory) {
+    public Expense(double amount, String name, Date date) {
         setAmount(amount);
         setName(name);
         setDate(date);
-        setCatagory(catagory);
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         if (amount == 0){
             throw new IllegalArgumentException("Amount can't be 0!");
         }
@@ -56,4 +55,6 @@ public class Expense implements Serializable{
     public void setCatagory(String catagory) {
         this.catagory = catagory;
     }
+
+    public void delete(Expense e){}
 }
